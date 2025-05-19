@@ -1,0 +1,27 @@
+[tool.black]
+line-length = 120
+extend-exclude = '''
+(
+      \.venv
+    | \.git
+    | \.mypy_cache
+    | \.pytest_cache
+    | \.vscode
+    | __pycache__
+    | .*_pb2.py
+    | .*_pb2.pyi
+)
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip = [
+    ".venv",
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".vscode",
+    "__pycache__",
+]
+skip_glob = ["*.pyc", "*.pyo", "*.log", "*_pb2.pyi", "*_pb2.py"]
